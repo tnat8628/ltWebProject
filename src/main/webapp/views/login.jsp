@@ -23,6 +23,12 @@ input[type=text], input[type=password] {
 	box-sizing: border-box;
 }
 
+/* Overwrite default styles of hr */
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
 /* Set a style for all buttons */
 button {
 	background-color: #04AA6D;
@@ -40,7 +46,7 @@ button:hover {
 }
 
 /* Extra style for the cancel button (red) */
-.cancelbtn {
+.registerbtn {
 	width: auto;
 	padding: 10px 18px;
 	background-color: #f44336;
@@ -87,9 +93,11 @@ span.psw {
 			<h3 class="alert alert danger">${alert}</h3>
 		</c:if>
 		<div class="container">
+			<h1>Login</h1>
+			<hr>
 			<label for="uname"><b>Username</b></label> <input type="text"
-				placeholder="Enter Username" name="username" required> <label
-				for="psw"><b>Password</b></label> <input type="password"
+				placeholder="Enter Username" name="username" required> 
+			<label for="psw"><b>Password</b></label> <input type="password"
 				placeholder="Enter Password" name="password" required>
 
 			<button type="submit">Login</button>
@@ -99,8 +107,8 @@ span.psw {
 		</div>
 
 		<div class="container" style="background-color: #f1f1f1">
-			<button type="button" class="cancelbtn">Cancel</button>
-			<span class="psw">Forgot <a href="#">password?</a></span>
+			<button type="button" class="registerbtn" onclick="location.href='/studyproject/register';">Register</button>
+			<span class="psw"><a href="#">Forgot password?</a></span>
 		</div>
 	</form>
 </body>

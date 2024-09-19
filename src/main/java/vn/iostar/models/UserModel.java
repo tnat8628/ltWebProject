@@ -23,8 +23,23 @@ public class UserModel implements Serializable{
 	//tạo Constructor
 	public UserModel() {
 		super();
-	}
+	}	
 	
+	public UserModel(String username, String password, String email, String fullname, 
+			String images, String phone, int roleid, Date createdate) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.fullname = fullname;
+		this.images = images;
+		this.phone = phone;
+		this.roleid = roleid;
+		this.createdate = createdate;
+	}
+
+
+
 	//tạo Getters and Setters
 	public int getId() {
 		return id;

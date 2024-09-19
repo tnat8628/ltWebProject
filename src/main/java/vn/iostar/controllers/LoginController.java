@@ -14,7 +14,7 @@ import vn.iostar.services.IUserService;
 import vn.iostar.services.Impl.UserServiceImpl;
 import vn.iostar.utils.Constant;
 
-@WebServlet(urlPatterns = { "/login", "/dang-nhap" })
+@WebServlet(urlPatterns = { "/login"})
 public class LoginController extends HttpServlet {
 
 	/**
