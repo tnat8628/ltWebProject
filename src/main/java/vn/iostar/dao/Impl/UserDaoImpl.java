@@ -131,16 +131,29 @@ public class UserDaoImpl implements IUserDAO {
 		return duplicate;
 	}
 
-	// Test chương trình. Kích phải chuột chọn run as->java application
-	public static void main(String[] args) {
+	@Override
+	public void updatePassword(String username, String newPassword) {
+		//UPDATE `ltweb`.`users` SET `password` = 'Abc123.' WHERE (`id` = '9');
+		String query = "UPDATE `ltweb`.`users` SET password = ? WHERE (username = ?);";
 		try {
-			IUserDAO user = new UserDaoImpl();
-			UserModel newUser = new UserModel("huongquyen", "Abc123", "nqhuongquyen@gmail.com", "Nguyễn Quỳnh Hương Quyên", null, "0955851462", 3, null);
-			user.insertUser(newUser);
-			System.out.println(user.findByUsername(newUser.getUsername()));
+			new DBConnectMySQL();
+			conn = DBConnectMySQL.getConnection();
+			ps = conn.prepareStatement(query);
+			ps.setString(1, newPassword);
+			ps.setString(2, username);
+			ps.executeUpdate();
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 		}
 	}
-
+	// Test chương trình. Kích phải chuột chọn run as->java application
+		public static void main(String[] args) {
+			try {
+				IUserDAO user = new UserDaoImpl();
+				user.updatePassword("tnat", "Abc.");
+				System.out.println(user.findByUsername("tnat"));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 }

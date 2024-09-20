@@ -49,7 +49,6 @@ button:hover {
 .registerbtn {
 	width: auto;
 	padding: 10px 18px;
-	background-color: #f44336;
 }
 
 /* Center the avatar image inside this container */
@@ -107,8 +106,8 @@ span.psw {
 		</div>
 
 		<div class="container" style="background-color: #f1f1f1">
-			<button type="button" class="registerbtn" onclick="location.href='/studyproject/register';">Register</button>
-			<span class="psw"><a href="#">Forgot password?</a></span>
+			<span class="registerbtn">Don't have an account? <a href="/studyproject/register">Register</a></span>
+			<span class="psw"><a href="/studyproject/resetpassword">Forgot password?</a></span>
 		</div>
 	</form>
 </body>

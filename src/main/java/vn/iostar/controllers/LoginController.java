@@ -53,6 +53,7 @@ public class LoginController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
 		// mã hóa dữ liệu tiếng Việt
 		resp.setContentType("text/html");
 		resp.setCharacterEncoding("UTF-8");
@@ -98,6 +99,7 @@ public class LoginController extends HttpServlet {
 			req.setAttribute("alert", alertMsg);
 			req.getRequestDispatcher("/views/login.jsp").forward(req, resp);
 		}
+		
 	}
 
 	private void saveRemeberMe(HttpServletResponse response, String username) {

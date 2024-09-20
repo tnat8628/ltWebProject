@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Register Page</title>
+<title>Reset Password Page</title>
 <style type="text/css">
 * {
 	box-sizing: border-box
@@ -39,7 +39,7 @@ hr {
 }
 
 /* Set a style for the submit/register button */
-.registerbtn {
+.resetbtn {
 	background-color: #04AA6D;
 	color: white;
 	padding: 16px 20px;
@@ -50,7 +50,7 @@ hr {
 	opacity: 0.9;
 }
 
-.registerbtn:hover {
+.resetbtn:hover {
 	opacity: 1;
 }
 
@@ -67,38 +67,27 @@ a {
 </style>
 </head>
 <body>
-	<form action="/studyproject/register" method="post">
+	<form action="/studyproject/resetpassword" method="post">
 		<c:if test="${alert !=null}">
 			<h3 class="alert alertdanger">${alert}</h3>
 		</c:if>
 		<div class="container">
-			<h1>Register</h1>
-			<p>Please fill in this form to create an account.</p>
+			<h1>Reset Password</h1>
+			<p>Please fill in this form to reset your password.</p>
 			<hr>
 
 			<label for="uname"><b>Username</b></label> <input type="text"
-				placeholder="Enter Username" name="username" required> 
-			<label for="email"><b>Email</b></label> <input type="text"
-				placeholder="Enter Email" name="email" required> 
-			<label for="fullname"><b>Fullname</b></label> <input type="text"
-				placeholder="Enter Fullname" name="fullname" required> 
-			<label for="phone"><b>Phone</b></label> <input type="text"
-				placeholder="Enter Phone" name="phone" required> 
-			<label for="psw"><b>Password</b></label> <input type="password"
-				placeholder="Enter Password" name="password" required> 
+				placeholder="Enter Username" name="username" required>  
+			<label for="psw"><b>New Password</b></label> <input type="password"
+				placeholder="Enter New Password" name="password" required> 
 			<label for="psw-repeat"><b>Repeat Password</b></label> <input
 				type="password" placeholder="Repeat Password" name="password-repeat"
 				required>
 			<hr>
 
-			<button type="submit" class="registerbtn">Register</button>
+			<button type="submit" class="resetbtn">Reset Password</button>
 		</div>
 
-		<div class="container signin">
-			<p>
-				Already have an account? <a href="/studyproject/login">Sign in</a>.
-			</p>
-		</div>
 	</form>
 </body>
 </html>

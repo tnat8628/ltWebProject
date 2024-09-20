@@ -57,11 +57,17 @@ public class UserServiceImpl implements IUserService {
 		return userDao.checkExistPhone(phone);
 	}
 
+	@Override
+	public void updatePassword(String username, String newPassword) {
+		userDao.updatePassword(username, newPassword);
+	}
+
 	// Test chương trình. Kích phải chuột chọn run as->java application
 	public static void main(String[] args) {
 		try {
 			IUserService user = new UserServiceImpl();
-			System.out.println(user.checkExistEmail("truongthu8628@gmail.com"));
+			user.updatePassword("tnat", "123456");
+			System.out.println(user.findByUsername("tnat"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
