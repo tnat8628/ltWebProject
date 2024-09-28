@@ -8,7 +8,7 @@
 				<i class="fa fa-truck"></i>
 				<div>
 					<h2>Free shipping</h2>
-					<em>Express delivery withing 3 days</em>
+					<em>Express delivery within 3 days</em>
 				</div>
 				<span>&nbsp;</span>
 			</div>

@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!-- Begin Header -->
+	
+	
+<!-- Begin Slider -->
 <%@ include file="/commons/web/slider.jsp"%>
-<!-- End Header -->
+<!-- End Slider -->
+
+
 <!-- BEGIN SALE PRODUCT & NEW ARRIVALS -->
 <div class="row margin-bottom-40">
 	<!-- BEGIN SALE PRODUCT -->
@@ -503,13 +507,7 @@
 </div>
 <!-- END TWO PRODUCTS & PROMO -->
 
-<!-- Begin Header -->
-<%@ include file="/commons/web/brands.jsp"%>
-<!-- End Header -->
 
-<!-- Begin Steps -->
-<%@ include file="/commons/web/steps.jsp"%>
-<!-- End Steps -->
 
 <!-- BEGIN PopUp View Product -->
 <!-- BEGIN fast view of a product -->

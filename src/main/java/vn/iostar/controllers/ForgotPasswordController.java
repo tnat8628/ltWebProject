@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import vn.iostar.services.IUserService;
 import vn.iostar.services.Impl.UserServiceImpl;
 
-@WebServlet(urlPatterns = "/resetpassword")
+@WebServlet(urlPatterns = "/forgotton-password")
 public class ForgotPasswordController extends HttpServlet {
 
 	/**
@@ -20,7 +20,7 @@ public class ForgotPasswordController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("views/resetpassword.jsp").forward(req, resp);
+		req.getRequestDispatcher("views/forgotton-password.jsp").forward(req, resp);
 	}
 
 	@Override
@@ -32,8 +32,8 @@ public class ForgotPasswordController extends HttpServlet {
 
 		// lấy dữ liệu của tham số từ view
 		String username = req.getParameter("username");
-		String password = req.getParameter("password");
-		String confirmpsw = req.getParameter("password-repeat");
+		String password = req.getParameter("new-password");
+		String confirmpsw = req.getParameter("repeat-password");
 		String alertMsg = "";
 
 		// gọi Service để lấy toàn bộ các hàm trong Service
